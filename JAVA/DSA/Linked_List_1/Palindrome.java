@@ -50,7 +50,7 @@ public class Palindrome {
     public Node findMid() {
         Node fast = head;
         Node slow = head;
-        while (fast != null && fast.next != null) {
+        while (fast!= null && fast.next != null) {
             slow = slow.next; // +1
             fast = fast.next.next; // +2
         }
