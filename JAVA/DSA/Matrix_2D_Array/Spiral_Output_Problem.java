@@ -1,4 +1,4 @@
-package DSA.Matrix_2D_Array;
+//package DSA.Matrix_2D_Array;
 
 public class Spiral_Output_Problem {
     public static void spiralPrinter(int matrix[][], int rows, int columns){

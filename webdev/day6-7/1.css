@@ -1,0 +1,35 @@
+/* 
+ text decoration,
+ background-color, color, 
+ text-align, (alingment of text)
+ font-weight(100-900) (normal is 400(gap between two line))
+ line-heigth: x (where it means x times normal)
+ letter-spacing: eg: 10px (here data must be in px)
+ font-family: (to decide which font to use)
+*/
+h1 {
+  color: white;
+  background-color: black;
+  text-align: center;
+  letter-spacing: 10px;
+}
+h2 {
+  color: rgb(100, 255, 135);
+  background-color: black;
+  text-align: left;
+
+  text-decoration: underline;
+}
+h3 {
+  color: #ff00af;
+  background-color: black;
+  text-align: justify;
+  text-decoration: double red overline;
+}
+
+p {
+  text-align: justify;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: Cambria;
+}

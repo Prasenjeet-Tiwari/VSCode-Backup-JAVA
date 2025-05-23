@@ -1,4 +1,4 @@
-package DSA.Array;
+//package JAVA.DSA.Array;
 
 public class Trapping_water {
     public static int water(int array[]) {
@@ -15,12 +15,14 @@ public class Trapping_water {
         for (int j = n - 2; j >= 0; j--) {
             right_max[j] = Math.max(array[j], right_max[j + 1]);
         }
-        for(int a : right_max)
-         System.out.print(a);
-         System.out.println();
         for(int b : left_max){
             System.out.print(b);
         }
+        System.out.println();
+        for(int a : right_max){
+            System.out.print(a);
+        }
+        System.out.println();
 
         int trapped_water = 0;
         for (int k = 0; k < n; k++) {

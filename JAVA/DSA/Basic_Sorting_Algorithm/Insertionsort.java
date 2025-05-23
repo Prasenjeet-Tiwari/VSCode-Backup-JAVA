@@ -1,4 +1,4 @@
-package DSA.Basic_Sorting_Algorithm;
+//package DSA.Basic_Sorting_Algorithm;
 public class Insertionsort {
     public static void main(String[] args){
         int array_1[]={4,2,5,6,3,1};
@@ -8,8 +8,8 @@ public class Insertionsort {
             while(j>=0 && array_1[j]>a){
                 array_1[j+1]=array_1[j];
                 j--;
-            array_1[j+1]=a;
             }
+            array_1[j+1]=a;
         }
         for(int b: array_1){
             System.out.print(b);

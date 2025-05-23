@@ -1,4 +1,4 @@
-package DSA.Array;
+//package DSA.Array;
 import java.util.Scanner;
 
 public class Array_1 
@@ -72,7 +72,7 @@ public class Array_1
                 smallest_no=list_of_values[j];
             }  
         }
-        System.out.println("The greatest and smallest value in the list are as follows: "+largest_no+" , "+smallest_no);
+        System.out.println("The greatest and smallest value in the list are as follows: "+ largest_no+" , "+smallest_no);
         System.out.println("\n");
         
 // BINARY SEARCH 
@@ -178,7 +178,7 @@ public class Array_1
         for(int u=0; u<end_3; u++)  // triple "for" is used so that all element within the two end points can beincluded
         {
             int maximum=array_5[u];
-            for(int v=u+1; v<end_2; v++)    // v always has indentation one unit more than "u" so that we can make a upper and lower bound
+            for(int v=u+1; v<end_3; v++)    // v always has indentation one unit more than "u" so that we can make a upper and lower bound
             {
                 maximum += array_5[v];
                 if(maximum > iteration_max)
@@ -215,6 +215,7 @@ public class Array_1
         for (int price : prices) {
             minPrice = Math.min(minPrice, price);
             maxProfit = Math.max(maxProfit, price - minPrice);
+            System.out.println("minPrice: " + minPrice + " maxProfit: " + maxProfit);
         }
 
         System.out.println(maxProfit);

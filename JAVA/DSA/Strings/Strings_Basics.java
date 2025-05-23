@@ -27,7 +27,7 @@ public class Strings_Basics {
         System.out.print("\n");
 
 // length
-        System.out.println("length of s2: "+s1.length()); //use paranthesis cause here string is a function
+        System.out.println("length of s1: "+s1.length()); //use paranthesis cause here string is a function
         System.out.println("length of s2: "+s2.length);  //no paranthesis cause its array
         System.out.println("length of s3: "+s3.length());   //use paranthesis cause here string is a function
         System.out.print("\n");
@@ -45,6 +45,11 @@ public class Strings_Basics {
             System.out.print(s4.charAt(i)+" "); // to print each indices in a loop[]
         }
         System.out.println("\n");
+
+//split
+        String input = "1+2+3";
+        String[] nums = input.split("\\+");  // Output: ["1", "2", "3"]
+
 
 // comparing
     
@@ -115,7 +120,7 @@ public class Strings_Basics {
 
         // Use String Builder to make the code efficient
 
-        String comp="aaaabbbccdeee";
+        String comp="aaaabbbccdeeef";
         String newcomp="";
         for(int i=0; i<comp.length(); i++){
                 Integer count=1;        //Integer class is used to convert this object to string { count.toString()}

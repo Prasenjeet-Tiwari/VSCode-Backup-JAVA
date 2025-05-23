@@ -1,4 +1,4 @@
-package DSA.Bit_manipulation;
+//package DSA.Bit_manipulation;
 
 public class Bit_types {
 
@@ -73,15 +73,11 @@ public class Bit_types {
          * eg:
          *  6  = 000110
          *     = (0)(0)(0)(1)(1)(0) //PAIRNG IN 3 SINCE B=3
-         * 6>>3= (0(0)(0)(0)(1)(1) //RIGHT SHIFT
+         * 6>>1= (0(0)(0)(0)(1)(1) //RIGHT SHIFT
          *     =  000011 
          *     =  (3) base 10   // 6/(2^1) OR USE DECIMAL CONVERSION 
          */
         System.out.println("The output of (binary right shift) of 6>>1: "+(6>>1));
-
-
-
-
     }
 
 }

@@ -10,7 +10,7 @@ public class Search_in_Sorted {
                 System.out.print("Found "+value+" at ("+rows+","+columns+")");
                 return;
             }
-            else if(value<matrix[rows][columns]){
+            else if(matrix[rows][columns]>value){
                 columns--;
             }
             else{

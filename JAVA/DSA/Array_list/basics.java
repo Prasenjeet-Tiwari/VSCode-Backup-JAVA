@@ -45,9 +45,19 @@ public class basics{
         Collections.sort(arrlist);
         System.out.println("\nSorted ArrayList: " + arrlist);
 
+
     //to change value of an array at index i use: arrayname.set(index, new_value);
 
         arrlist.set(0, 50);
         System.out.println("\nUpdated after changing value of  arraylist: " + arrlist );
+
+    
+
+    /*lambda function sort presebnt in greeedy algo check there
+        Arrays.sort(input , Comparator.comparingDouble(o->o[1]));   //aray sort basis of column
+
+        Collections.sort(data, (obj1,obj2) -> obj2.profit - obj1.profit);   //class sort on the basis of field
+        
+    */
     }
 }

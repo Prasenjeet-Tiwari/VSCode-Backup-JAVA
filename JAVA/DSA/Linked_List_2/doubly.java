@@ -42,10 +42,11 @@ public class doubly {
 
         if(head==null){
             tail=head=newnode;
+            return;
         }
 
-        newnode.prv= head;
-        head.next=newnode;
+        newnode.prv= tail;
+        tail.next=newnode;
         tail=  newnode;
     }
 

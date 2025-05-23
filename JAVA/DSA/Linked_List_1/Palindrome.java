@@ -67,7 +67,7 @@ public class Palindrome {
 
         // Step 2: Reverse the second half
         Node prev = null;
-        Node curr = mid;
+        Node curr = mid;    //we are reversing second half not first, check the video
         Node next;
 
         while (curr != null) {
@@ -96,7 +96,7 @@ public class Palindrome {
         a.addFirst(1);
         a.addFirst(2);
         a.addFirst(3);
-        a.addFirst(2);
+        a.addFirst(2); 
         a.addFirst(1);
         boolean ans1 = a.checkPalindrome();
         System.out.println("The sequence is palindrome: " + ans1);

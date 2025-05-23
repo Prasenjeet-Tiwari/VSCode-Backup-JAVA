@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class binomial_formula 
+class binomial_formula 
 {
     public static long binomial(int a, int b) {
         long n = factorial(a);

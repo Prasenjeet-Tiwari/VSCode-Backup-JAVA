@@ -16,7 +16,7 @@ public class NO_continuous_11 {
 
     }
     public static void main(String[] args){
-        System.out.print("The posibble valid  worlds are are : " );
+        System.out.print("The posibble valid  worlds are are : \n" );
         func(3,0,"");
     }
 }
