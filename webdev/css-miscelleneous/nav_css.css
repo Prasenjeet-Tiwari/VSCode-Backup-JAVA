@@ -1,0 +1,27 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(152, 147, 141);
+}
+.box {
+  width: 50%;
+  margin-left: 30px;
+}
+#special {
+  margin-left: 0;
+}
+span img {
+  height: 20px;
+  width: 20px;
+  padding: 2px 2px 2px;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-right: 10px;
+  display: inline-flex;
+  justify-content: left;
+  border-radius: 12px;
+}
+.opt .icon {
+  width: 50px;
+  height: 20px;
+  background-color: rgb(126, 57, 57);
+}

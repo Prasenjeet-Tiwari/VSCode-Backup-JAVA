@@ -1,0 +1,25 @@
+.par {
+  width: 200px;
+  height: 300px;
+  box-shadow: 1px 2px 4px 4px gray;
+  border: 2px solid black;
+
+  border-radius: 5px;
+  display: inline-block;
+  margin: 20px;
+  transition-duration: 0.2s;
+  vertical-align: top;
+}
+.desc {
+  padding: 0 0px 0 0px;
+
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.par:hover {
+  box-shadow: 2px 4px 8px 8px black;
+}

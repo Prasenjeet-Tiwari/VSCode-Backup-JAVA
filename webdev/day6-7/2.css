@@ -1,0 +1,97 @@
+/* universal selctor */
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* element selctor*/
+h1,
+h3 {
+  color: #b92b27;
+}
+
+/* element selctor using id */
+#login,
+#signup {
+  color: white;
+  background: #b92b27;
+}
+
+/* class */
+.upvote {
+  color: white;
+  background-color: green;
+}
+
+/* descendant selector */
+
+.post a {
+  color: black;
+  background-color: yellow;
+}
+nav ul li {
+  color: red;
+}
+nav ul li a {
+  /*You can skip ul li and just put "nav a" (Advantage over child combinator)*/
+  color: white;
+  background-color: black;
+}
+
+/* Descendant sibling */
+p + h3 {
+  text-decoration: underline;
+}
+.upvote + button {
+  background-color: cornflowerblue;
+}
+
+/* child combinator */
+div > input {
+  background-color: lightcyan;
+}
+
+/* attribute selctor */
+input[type="text"] {
+  color: green;
+}
+input[type="password"] {
+  color: red;
+}
+
+/* pseudoclass (hover, active, checked, nth-of-type)*/
+
+button:hover {
+  color: black;
+  background-color: white;
+}
+h3:hover {
+  text-decoration: none;
+}
+button:active {
+  background-color: hotpink;
+}
+input[type="radio"]:checked + label {
+  color: red;
+  font-weight: bold;
+}
+p:nth-of-type(2) {
+  font-weight: bold;
+  color: greenyellow;
+  background-color: lightcoral;
+}
+
+h3::first-letter {
+  color: black;
+}
+h3::first-letter {
+  color: black;
+}
+
+p::selection {
+  background-color: limegreen;
+  color: white;
+}
+/* also available for (first-line) (selection) */
+/* study !Important */
+
+/* Study lecture (15-18) from day 7 of the playlist */

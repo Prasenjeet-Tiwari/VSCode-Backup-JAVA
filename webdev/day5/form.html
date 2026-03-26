@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/action">
+      <!-- form input types: text, password, number, time, color, (refer mdn for more info)-->
+      <!--by default its text-->
+
+      <!-- #type 1 -->
+      <label>
+        Enter Your Name:
+        <input type="text" placeholder="Name" />
+        <br />
+      </label>
+
+      <!-- #type 2 -->
+      <label for="passw"> Enter the Password:</label>
+      <input type="password" placeholder="password" id="passw" />
+      <br />
+
+      <input type="number" placeholder="Phone Number" />
+      <input type="password" placeholder="Password" />
+      <input type="number" placeholder="Phone Number" />
+      <input type="time" />
+      <input type="color" />
+
+      <br />
+      <hr />
+
+      <!-- Buttons: must be under form else no use, submits data at location mentioned in action (Under form) -->
+
+      <button>Submit</button>
+      <button type="reset">Reset</button>
+      <input type="submit" value="You can create button using input" />
+    </form>
+
+    <br />
+    <hr />
+
+    <form action="/action">
+      <!-- Use of Name and value -->
+      <label>
+        Use Of Name:
+        <input type="text" placeholder="Enter any vaule" name="Input" />
+        <button type="submit">Submit</button>
+      </label>
+
+      <br />
+      <hr />
+
+      <!-- Use of Checkbox -->
+      <div>
+        Choose a subject:
+        <label for="Maths">
+          <input type="checkbox" id="Maths" name="Input" value="Mth" />
+          Maths
+        </label>
+        <label for="Science">
+          <input type="checkbox" id="Science" name="Input" value="sc" />
+          Science
+        </label>
+        <label for="English">
+          <input type="checkbox" id="English" name="Input" value="eng" />
+          English
+        </label>
+      </div>
+
+      <br />
+      <hr />
+
+      <!-- Radio -->
+      <div>
+        <p>Choose your favorite animal:</p>
+
+        <input type="radio" id="Dog" name="animal" value="Dog" checked />
+        <label for="Dog">Dog</label>
+
+        <input type="radio" id="Cat" name="animal" value="Cat" />
+        <label for="Cat">Cat</label>
+
+        <input type="radio" id="Rabbit" name="animal" value="Rabbit" />
+        <label for="Rabbit">Rabbit</label>
+
+        <input type="radio" id="Parrot" name="animal" value="Parrot" />
+        <label for="Parrot">Parrot</label>
+      </div>
+
+      <br />
+      <hr />
+
+      <!-- Select(dropdown) -->
+      <div>
+        <p>Choose your profession:</p>
+        <select name="profession" id="profession">
+          <option value="" disabled selected>Select your profession</option>
+          <option value="Doctor">Doctor</option>
+          <option value="Engineer">Engineer</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Artist">Artist</option>
+        </select>
+      </div>
+
+      <hr />
+      <br />
+
+      <!-- Range -->
+      <form>
+        <div>
+          <p>Choose a value using range (0-100):</p>
+          <input
+            type="range"
+            id="rangeInput"
+            name="rangeInput"
+            min="0"
+            max="100"
+            value="50"
+          />
+          <label for="rangeInput">Range Value</label>
+        </div>
+
+        <div>
+          <p>Choose a value using step (increments of 5):</p>
+          <input
+            type="number"
+            id="numberInput"
+            name="numberInput"
+            min="0"
+            max="100"
+            step="5"
+            value="50"
+          />
+          <label for="numberInput">Number Value</label>
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <br />
+      <hr />
+
+      <!-- text area -->
+      <form>
+        <div>
+          <p>Choose a value using range (0-100):</p>
+          <input
+            type="range"
+            id="rangeInput"
+            name="rangeInput"
+            min="0"
+            max="100"
+            value="50"
+          />
+          <label for="rangeInput">Range Value</label>
+        </div>
+
+        <div>
+          <p>Choose a value using step (increments of 5):</p>
+          <input
+            type="number"
+            id="numberInput"
+            name="numberInput"
+            min="0"
+            max="100"
+            step="5"
+            value="50"
+          />
+          <label for="numberInput">Number Value</label>
+        </div>
+
+        <div>
+          <p>Provide your feedback:</p>
+          <textarea
+            id="feedback"
+            name="feedback"
+            rows="4"
+            cols="50"
+            placeholder="Enter your feedback here..."
+          ></textarea>
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </form>
+  </body>
+</html>

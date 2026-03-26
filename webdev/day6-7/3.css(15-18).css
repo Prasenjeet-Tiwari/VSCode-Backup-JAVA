@@ -1,0 +1,139 @@
+/* =====================================================
+   SELECTOR SPECIFICITY & CASCADING
+   ===================================================== */
+
+/* ---------------------------------
+   WHAT IS SPECIFICITY?
+   ---------------------------------
+   Specificity decides which CSS rule
+   will be applied when multiple rules
+   target the same element.
+*/
+
+/* ---------------------------------
+   SPECIFICITY ORDER (HIGH → LOW)
+   ---------------------------------
+   1. !important
+   2. Inline styles
+   3. ID selector
+   4. Class / Pseudo-class / Attribute selector
+   5. Element / Pseudo-element
+*/
+
+/* Example:
+   id > class > element
+*/
+
+/* ---------------------------------
+   SPECIFICITY VALUES (NUMERIC IDEA)
+   ---------------------------------
+   Inline style        → 1000
+   ID selector (#id)   → 100
+   Class (.class),
+   Pseudo-class (:hover),
+   Attribute ([type]) → 10
+   Element (p, h1),
+   Pseudo-element (::before) → 1
+*/
+
+/* Example:
+   #box        → 100
+   .container → 10
+   p          → 1
+*/
+
+/* ---------------------------------
+   PSEUDO-CLASS vs PSEUDO-ELEMENT
+   ---------------------------------
+   Pseudo-class  → changes state (:hover, :active, :nth-child)
+   Pseudo-element → targets part (::first-letter, ::before)
+*/
+
+/* ---------------------------------
+   CASCADING RULE
+   ---------------------------------
+   If two selectors have SAME specificity,
+   then the rule written LAST will apply.
+*/
+
+/* Example:
+   p { color: red; }
+   p { color: blue; }   → blue wins
+*/
+
+/* ---------------------------------
+   INLINE SPECIFICITY
+   ---------------------------------
+   Inline CSS has higher priority
+   than ID, class, or element selectors.
+*/
+
+/* Example:
+   <p style="color: red;">Hello</p>
+*/
+
+/* ---------------------------------
+   !IMPORTANT
+   ---------------------------------
+   Overrides ALL specificity rules.
+   Should be avoided unless necessary.
+*/
+
+/* Example:
+   p {
+     color: red !important;
+   }
+*/
+
+/* ---------------------------------
+   INHERITANCE
+   ---------------------------------
+   Some properties are inherited
+   from parent to child automatically.
+*/
+
+/* Common inherited properties:
+   - color
+   - font-family
+   - font-size
+*/
+
+/* NOT inherited by default:
+   - width
+   - height
+   - margin
+   - padding
+   - border
+*/
+
+/* ---------------------------------
+   INPUT & BUTTON INHERITANCE
+   ---------------------------------
+   input and button DO NOT inherit
+   font styles automatically.
+*/
+
+/* To force inheritance:
+   input, button {
+     font-family: inherit;
+     font-size: inherit;
+   }
+*/
+
+/* width & height are NEVER inherited */
+
+/* ---------------------------------
+   COLOR PALETTES (DESIGN NOTE)
+   ---------------------------------
+   Use online color palette tools:
+   - Coolors
+   - MyColorSpace
+*/
+
+/* Purpose:
+   - Consistent UI colors
+   - Better contrast
+   - Professional design
+*/
+
+/* (Note only – no need to use in code) */

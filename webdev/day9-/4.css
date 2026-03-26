@@ -1,0 +1,145 @@
+/* ================================
+   FILE 2: style.css
+   ================================ */
+
+/* -------------------------------
+   BASIC BOX
+   ------------------------------- */
+.box {
+  width: 200px;
+  height: 100px;
+
+  border-width: 4px;
+  border-style: solid;
+  border-color: crimson;
+
+  margin: 20px;
+  padding: 10px;
+}
+
+/* -------------------------------
+   BORDER SIDES
+   ------------------------------- */
+.border-sides {
+  width: 200px;
+  height: 100px;
+
+  border-top: 4px solid red;
+  border-right: 6px dashed blue;
+  border-bottom: 8px dotted green;
+  border-left: 10px solid black;
+
+  margin: 20px;
+}
+
+/* -------------------------------
+   BORDER RADIUS (CIRCLE)
+   ------------------------------- */
+.circle {
+  width: 120px;
+  height: 120px;
+
+  background-color: lightblue;
+  border-radius: 50%; /* square → circle */
+
+  margin: 20px;
+}
+
+/* -------------------------------
+   BORDER RADIUS (INDIVIDUAL)
+   ------------------------------- */
+.radius-corners {
+  width: 200px;
+  height: 100px;
+
+  background-color: lightgreen;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 10px;
+
+  margin: 20px;
+}
+
+/* -------------------------------
+   PADDING DECLARATION
+   ------------------------------- */
+.padding-demo {
+  width: 200px;
+  background-color: peachpuff;
+
+  /*   4 values → clockwise (top right bottom left) 
+     3 values → (top ,right & left, bottom ) 
+     2 values → (top & bottom ,right & left)
+     1 values → (top ,right & left, bottom )
+     
+     same for padding and margin
+*/
+  padding: 10px 20px 30px 40px;
+
+  margin: 20px;
+}
+
+/* -------------------------------
+   MARGIN & PERCENTAGE
+   ------------------------------- */
+.parent {
+  width: 60%;
+  background-color: #ddd;
+  margin: 20px;
+  padding: 10px;
+}
+
+.child {
+  width: 50%;
+  margin-left: 10%; /* % based on parent width */
+  background-color: lightcoral;
+}
+
+/* -------------------------------
+   DISPLAY PROPERTY
+   ------------------------------- */
+.block {
+  display: block;
+  width: 200px;
+  background-color: lightyellow;
+  margin: 10px 0;
+}
+
+.inline {
+  display: inline;
+  background-color: yellow;
+
+  padding: 10px; /* works */
+  margin: 10px; /* left & right only */
+}
+
+.inline-block {
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  background-color: lightskyblue;
+  margin: 10px;
+}
+
+/* -------------------------------
+   EM vs REM
+   ------------------------------- */
+.em-parent {
+  font-size: 2em;
+  margin: 20px;
+}
+
+.em-child {
+  font-size: 2em; /* snowball effect → 4em */
+}
+
+.rem-parent {
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.rem-child {
+  font-size: 2rem; /* stable */
+}

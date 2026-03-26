@@ -1,0 +1,37 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Basic_LinkedL_hashset",
+      "request": "launch",
+      "mainClass": "Basic_LinkedL_hashset",
+      "projectName": "Visual Studio Codes_a743d441"
+    },
+    {
+      "type": "java",
+      "name": "Basics",
+      "request": "launch",
+      "mainClass": "DSA.Hashing.Basics",
+      "projectName": "Visual Studio Codes_a743d441"
+    },
+    {
+      "type": "java",
+      "name": "rotated_sorted_twosum",
+      "request": "launch",
+      "mainClass": "rotated_sorted_twosum",
+      "projectName": "Visual Studio Codes_a743d441"
+    },
+    {
+      "type": "java",
+      "name": "ancestor_Last_comn_ances",
+      "request": "launch",
+      "mainClass": "ancestor_Last_comn_ances",
+      "projectName": "Visual Studio Codes_a743d441",
+      "console": "integratedTerminal"
+    }
+  ]
+}

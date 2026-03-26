@@ -1,0 +1,38 @@
+#NOTES on NODE JS
+
+-- to open <node> in the terminal and to exit enter <.exit>
+-- we dont have window object but we have <global>
+-- use <.help> for help
+
+--<process> object provides information and control regarding current nodejs process
+--<process.argv>
+
+-- < node script.js hello bro >
+so now "script.js", "hello" and "bro" will be treated as object
+
+--model.exports is Used to export a single value (object, function, class, etc.)
+--<mode.export <whatever you want>>
+    lets say we are exporting "123",
+    so file A exports "123" using "model.export"
+
+    if another file want to use "123" they have to use "require"
+-- <require(<location>)>
+    note: "./math.html" here this file exists in the same folder
+    we can say that because it starts with "./"
+
+
+-- READ THE README.MD FILE OF ApnaCollege/Sigma 6.0/Back-End/NodeJS
+
+--Note: (for global installation)
+if we use 
+<npm install -g <package name of what you want to install>>
+ 
+we still need to use
+<npm link <<package name of what you want to install>>
+this brings the package from my system(Operating system)  to current directory
+
+
+Note:
+if using import
+need to add "type: module" in the "package.json file" in the directory
+where we are importing.
