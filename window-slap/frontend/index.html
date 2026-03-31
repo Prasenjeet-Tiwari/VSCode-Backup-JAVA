@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Slap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Ambient Background -->
+      <div class="ambient-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+      </div>
+
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect
+              x="2"
+              y="2"
+              width="28"
+              height="28"
+              rx="4"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <line
+              x1="16"
+              y1="2"
+              x2="16"
+              y2="30"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <line
+              x1="2"
+              y1="16"
+              x2="30"
+              y2="16"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+          </svg>
+          <span>WindowSlap</span>
+        </div>
+        <div class="header-actions">
+          <button class="btn-icon" id="statsBtn" title="Statistics">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M18 20V10M12 20V4M6 20v-6" />
+            </svg>
+          </button>
+          <button class="btn-icon" id="settingsBtn" title="Settings">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Intensity Meter -->
+        <div class="intensity-meter">
+          <div class="meter-label">Intensity</div>
+          <div class="meter-bar">
+            <div class="meter-fill" id="intensityFill"></div>
+            <div class="meter-segments">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="meter-value" id="intensityValue">0</div>
+        </div>
+
+        <!-- Interactive Window -->
+        <div class="window-frame" id="windowFrame">
+          <div class="window-titlebar">
+            <div class="window-controls">
+              <span class="control close"></span>
+              <span class="control minimize"></span>
+              <span class="control maximize"></span>
+            </div>
+            <span class="window-title">Slap Me</span>
+          </div>
+          <div class="window-glass" id="windowGlass">
+            <div class="glass-reflection"></div>
+            <div class="slap-zone" id="slapZone">
+              <div class="hint-text" id="hintText">Click or tap anywhere</div>
+            </div>
+            <!-- Ripple Container -->
+            <div class="ripple-container" id="rippleContainer"></div>
+            <!-- Crack Overlay -->
+            <svg class="crack-overlay" id="crackOverlay" viewBox="0 0 400 300">
+              <defs>
+                <filter id="crackGlow">
+                  <feGaussianBlur stdDeviation="2" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stats Display -->
+        <div class="quick-stats">
+          <div class="stat-item">
+            <span class="stat-value" id="totalSlaps">0</span>
+            <span class="stat-label">Total Slaps</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="maxIntensity">0</span>
+            <span class="stat-label">Max Intensity</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="sessionTime">0:00</span>
+            <span class="stat-label">Session</span>
+          </div>
+        </div>
+      </main>
+
+      <!-- Settings Panel -->
+      <div class="panel-overlay" id="settingsOverlay">
+        <div class="panel settings-panel">
+          <div class="panel-header">
+            <h2>Settings</h2>
+            <button class="btn-close" id="closeSettings">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="panel-content">
+            <div class="setting-group">
+              <label class="setting-label">Volume</label>
+              <div class="slider-container">
+                <input
+                  type="range"
+                  class="slider"
+                  id="volumeSlider"
+                  min="0"
+                  max="100"
+                  value="70"
+                />
+                <span class="slider-value" id="volumeValue">70%</span>
+              </div>
+            </div>
+            <div class="setting-group">
+              <label class="setting-label">Sensitivity</label>
+              <div class="slider-container">
+                <input
+                  type="range"
+                  class="slider"
+                  id="sensitivitySlider"
+                  min="1"
+                  max="10"
+                  value="5"
+                />
+                <span class="slider-value" id="sensitivityValue">5</span>
+              </div>
+            </div>
+            <div class="setting-group">
+              <label class="setting-label">Sound Pack</label>
+              <div class="sound-packs">
+                <button class="pack-btn active" data-pack="glass">Glass</button>
+                <button class="pack-btn" data-pack="wood">Wood</button>
+                <button class="pack-btn" data-pack="metal">Metal</button>
+                <button class="pack-btn" data-pack="silly">Silly</button>
+              </div>
+            </div>
+            <div class="setting-group">
+              <label class="setting-label">Visual Effects</label>
+              <div class="toggle-group">
+                <label class="toggle">
+                  <input type="checkbox" id="crackEffect" checked />
+                  <span class="toggle-slider"></span>
+                </label>
+                <span>Crack Effects</span>
+              </div>
+              <div class="toggle-group">
+                <label class="toggle">
+                  <input type="checkbox" id="screenShake" checked />
+                  <span class="toggle-slider"></span>
+                </label>
+                <span>Screen Shake</span>
+              </div>
+            </div>
+            <button class="btn-danger" id="resetStats">Reset Statistics</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Panel -->
+      <div class="panel-overlay" id="statsOverlay">
+        <div class="panel stats-panel">
+          <div class="panel-header">
+            <h2>Statistics</h2>
+            <button class="btn-close" id="closeStats">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="panel-content">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-card-value" id="statTotalSlaps">0</div>
+                <div class="stat-card-label">Total Slaps</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-value" id="statAvgIntensity">0</div>
+                <div class="stat-card-label">Avg Intensity</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-value" id="statMaxIntensity">0</div>
+                <div class="stat-card-label">Peak Intensity</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-value" id="statSlapRate">0</div>
+                <div class="stat-card-label">Slaps/min</div>
+              </div>
+            </div>
+            <div class="intensity-history">
+              <h3>Intensity History</h3>
+              <div class="history-chart" id="historyChart">
+                <div class="chart-bars"></div>
+              </div>
+            </div>
+            <div class="achievements">
+              <h3>Achievements</h3>
+              <div class="achievement-list" id="achievementList">
+                <!-- Achievements will be rendered here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toast Container -->
+      <div class="toast-container" id="toastContainer"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
